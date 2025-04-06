@@ -81,6 +81,18 @@
     "Abhishek-Sharma182005": {
       "points": 3,
       "social_media_points": 0
+    },
+    "Nataraj-chandrasekaran": {
+      "points": 3,
+      "social_media": ""
+    },
+    "Mohan18Kumar": {
+      "points": 3,
+      "social_media": ""
+    },
+    "Harini050805": {
+      "points": 3,
+      "social_media": ""
     }
   },
   "history": [
@@ -664,6 +676,27 @@
       "pr_number": 5,
       "date": "2025-04-06T12:01:17.018892+00:00",
       "reason": "Daily PR Challenge: PR #5"
+    },
+    {
+      "username": "Nataraj-chandrasekaran",
+      "points": 3,
+      "pr_number": 97,
+      "date": "2025-04-06T18:41:18.649725+00:00",
+      "reason": "Daily PR Challenge: PR #97"
+    },
+    {
+      "username": "Mohan18Kumar",
+      "points": 3,
+      "pr_number": 96,
+      "date": "2025-04-06T18:41:27.326776+00:00",
+      "reason": "Daily PR Challenge: PR #96"
+    },
+    {
+      "username": "Harini050805",
+      "points": 3,
+      "pr_number": 95,
+      "date": "2025-04-06T18:41:36.116668+00:00",
+      "reason": "Daily PR Challenge: PR #95"
     }
   ],
   "metadata": {
@@ -675,6 +708,6 @@
     "total_participants": 20,
     "total_points_distributed": 165
   },
-  "total_points": 243,
-  "last_updated": "2025-04-06T12:31:02.937216+00:00"
+  "total_points": 255,
+  "last_updated": "2025-04-06T18:41:41.781847+00:00"
 }
