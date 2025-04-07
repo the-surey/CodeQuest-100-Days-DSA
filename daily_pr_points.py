@@ -63,7 +63,7 @@ def main():
         if pr_day >= EVENT_START_DATE:
             user_days.setdefault(username, set()).add(pr_day)
 
-    for pr in repo.get_pulls(state='open'):
+    for pr in repo.get_pulls(state='all'):
         username = pr.user.login
         pr_date = pr.created_at.date()
 
