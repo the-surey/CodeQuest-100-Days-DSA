@@ -6,19 +6,19 @@
       "social_media_points": 0
     },
     "Utkarsh-0003": {
-      "points": 21,
+      "points": 6,
       "social_media_points": 0
     },
     "winsome-nandini": {
-      "points": 21,
+      "points": 6,
       "social_media_points": 3
     },
     "Ayush-vishwakarma-git": {
-      "points": 18,
+      "points": 6,
       "social_media_points": 0
     },
     "Devilwelcometohell": {
-      "points": 18,
+      "points": 6,
       "social_media_points": 0
     },
     "palakrawat30": {
@@ -26,7 +26,7 @@
       "social_media_points": 0
     },
     "shagun111484": {
-      "points": 18,
+      "points": 6,
       "social_media_points": 0
     },
     "ABUZAR-2003": {
@@ -34,7 +34,7 @@
       "social_media_points": 0
     },
     "Avantikaay": {
-      "points": 18,
+      "points": 6,
       "social_media_points": 0
     },
     "Madhumita-127": {
@@ -42,11 +42,11 @@
       "social_media_points": 0
     },
     "Abhishek05eccs": {
-      "points": 18,
+      "points": 6,
       "social_media_points": 0
     },
     "digambarsingh14": {
-      "points": 15,
+      "points": 6,
       "social_media_points": 0
     },
     "Harshit-Ram": {
@@ -82,7 +82,7 @@
       "social_media_points": 1
     },
     "Nataraj-chandrasekaran": {
-      "points": 18,
+      "points": 6,
       "social_media": ""
     },
     "Mohan18Kumar": {
@@ -90,8 +90,16 @@
       "social_media": ""
     },
     "Harini050805": {
-      "points": 18,
+      "points": 6,
       "social_media": ""
+    },
+    "joshika0805": {
+      "points": 3,
+      "social_media_points": 0
+    },
+    "Yamini113": {
+      "points": 3,
+      "social_media_points": 0
     }
   },
   "history": [
@@ -710,6 +718,90 @@
       "pr_number": 101,
       "date": "2025-04-07T08:22:27.667496+00:00",
       "reason": "Daily PR Challenge: PR #101"
+    },
+    {
+      "username": "joshika0805",
+      "points": 3,
+      "pr_number": 116,
+      "date": "2025-04-07T17:02:23.995062+00:00",
+      "reason": "Daily PR Challenge: PR #116"
+    },
+    {
+      "username": "Devilwelcometohell",
+      "points": 3,
+      "pr_number": 115,
+      "date": "2025-04-07T17:02:30.704006+00:00",
+      "reason": "Daily PR Challenge: PR #115"
+    },
+    {
+      "username": "Yamini113",
+      "points": 3,
+      "pr_number": 113,
+      "date": "2025-04-07T17:02:43.107605+00:00",
+      "reason": "Daily PR Challenge: PR #113"
+    },
+    {
+      "username": "Harini050805",
+      "points": 3,
+      "pr_number": 112,
+      "date": "2025-04-07T17:02:49.296682+00:00",
+      "reason": "Daily PR Challenge: PR #112"
+    },
+    {
+      "username": "Ayush-vishwakarma-git",
+      "points": 3,
+      "pr_number": 111,
+      "date": "2025-04-07T17:02:55.719326+00:00",
+      "reason": "Daily PR Challenge: PR #111"
+    },
+    {
+      "username": "Nataraj-chandrasekaran",
+      "points": 3,
+      "pr_number": 110,
+      "date": "2025-04-07T17:03:02.018863+00:00",
+      "reason": "Daily PR Challenge: PR #110"
+    },
+    {
+      "username": "digambarsingh14",
+      "points": 3,
+      "pr_number": 108,
+      "date": "2025-04-07T17:03:28.524682+00:00",
+      "reason": "Daily PR Challenge: PR #108"
+    },
+    {
+      "username": "Avantikaay",
+      "points": 3,
+      "pr_number": 107,
+      "date": "2025-04-07T17:03:34.752118+00:00",
+      "reason": "Daily PR Challenge: PR #107"
+    },
+    {
+      "username": "winsome-nandini",
+      "points": 3,
+      "pr_number": 106,
+      "date": "2025-04-07T17:03:41.358304+00:00",
+      "reason": "Daily PR Challenge: PR #106"
+    },
+    {
+      "username": "Utkarsh-0003",
+      "points": 3,
+      "pr_number": 105,
+      "date": "2025-04-07T17:03:47.316416+00:00",
+      "reason": "Daily PR Challenge: PR #105"
+    },
+    {
+      "username": "shagun111484",
+      "points": 3,
+      "pr_number": 104,
+      "date": "2025-04-07T17:03:53.094249+00:00",
+      "reason": "Daily PR Challenge: PR #104"
+    },
+    {
+      "username": "Abhishek05eccs",
+      "points": 3,
+      "pr_number": 103,
+      "date": "2025-04-07T17:03:59.422149+00:00",
+      "reason": "Daily PR Challenge: PR #103"
     }
   ],
   "metadata": {
@@ -718,9 +810,9 @@
     "max_points_per_day": 3,
     "event_start_date": "2025-04-01",
     "last_updated": "",
-    "total_participants": 23,
-    "total_points_distributed": 258
+    "total_participants": 25,
+    "total_points_distributed": 237
   },
-  "total_points": 258,
-  "last_updated": "2025-04-07T08:22:39.573190+00:00"
+  "total_points": 237,
+  "last_updated": "2025-04-07T17:04:26.468776+00:00"
 }
