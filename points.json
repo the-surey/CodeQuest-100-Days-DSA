@@ -87,7 +87,7 @@
       "social_media": ""
     },
     "Mohan18Kumar": {
-      "points": 3,
+      "points": 6,
       "social_media": ""
     },
     "Harini050805": {
@@ -697,6 +697,20 @@
       "pr_number": 95,
       "date": "2025-04-06T18:41:36.116668+00:00",
       "reason": "Daily PR Challenge: PR #95"
+    },
+    {
+      "username": "Mohan18Kumar",
+      "points": 3,
+      "pr_number": 102,
+      "date": "2025-04-07T08:22:21.187106+00:00",
+      "reason": "Daily PR Challenge: PR #102"
+    },
+    {
+      "username": "22MH1A04H3",
+      "points": 3,
+      "pr_number": 101,
+      "date": "2025-04-07T08:22:27.667496+00:00",
+      "reason": "Daily PR Challenge: PR #101"
     }
   ],
   "metadata": {
@@ -705,9 +719,9 @@
     "max_points_per_day": 3,
     "event_start_date": "2025-04-01",
     "last_updated": "",
-    "total_participants": 20,
-    "total_points_distributed": 165
+    "total_participants": 23,
+    "total_points_distributed": 258
   },
-  "total_points": 255,
-  "last_updated": "2025-04-07T04:57:17.041633+00:00"
+  "total_points": 258,
+  "last_updated": "2025-04-07T08:22:30.795720+00:00"
 }
