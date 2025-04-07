@@ -1,4 +1,3 @@
-
 p=0
 while(p==0):
     a=input("Which path do you choose:")
@@ -13,4 +12,3 @@ while(p==0):
     else:
         print("Invalid choise.Please enter 'left' or 'right' ")
         
-    
