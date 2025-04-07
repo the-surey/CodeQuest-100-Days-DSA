@@ -14,7 +14,7 @@ submissions/*/debug/
 # Ignore Python cache
 __pycache__/
 *.pyc
-
+daily_pr_points.py
 # Ignore environment variables
 .env
 
