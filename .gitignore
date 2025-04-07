@@ -14,7 +14,7 @@ submissions/*/debug/
 # Ignore Python cache
 __pycache__/
 *.pyc
-daily_pr_points.py
+
 # Ignore environment variables
 .env
 
@@ -24,3 +24,9 @@ daily_pr_points.py
 # Ignore scripts and testing files
 scripts/
 test_solution.py
+update_scores.py
+style.css
+script.js
+scores json
+index.html
+daily_pr_points.py
