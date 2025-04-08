@@ -1,0 +1,107 @@
+name: Update Points and Merge PRs
+
+on:
+  workflow_dispatch:  # Manual triggering
+  schedule:
+    - cron: '0 0 * * *'  # Runs daily at midnight UTC
+
+jobs:
+  merge-and-update:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: pip install PyGithub python-dateutil
+
+    - name: Merge open PRs and update points
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        import json
+        import os
+        from github import Github
+        from datetime import datetime, timezone
+        from dateutil import parser
+
+        # Load the current JSON data
+        with open('points.json', 'r') as f:
+            data = json.load(f)
+
+        # Initialize GitHub client
+        g = Github(os.getenv('GITHUB_TOKEN'))
+        repo = g.get_repo(os.getenv('GITHUB_REPOSITORY'))
+
+        # Get all open PRs
+        open_prs = repo.get_pulls(state='open')
+
+        # Track users who have already received points today
+        users_points_today = {}
+        today = datetime.now(timezone.utc).date()
+
+        # First pass: Check when users last got points
+        for username in data['users']:
+            if 'last_points_date' in data['users'][username]:
+                last_date = parser.parse(data['users'][username]['last_points_date']).date()
+                if last_date == today:
+                    users_points_today[username] = True
+
+        merged_users = set()
+
+        for pr in open_prs:
+            username = pr.user.login
+            print(f"Processing PR #{pr.number} from {username}")
+
+            # Skip if user already got points today
+            if username in users_points_today:
+                print(f"Skipping {username} - already received points today")
+                continue
+
+            # Check if PR is mergeable
+            if pr.mergeable:
+                try:
+                    # Merge the PR
+                    pr.merge(merge_method='merge')
+                    print(f"Merged PR #{pr.number}")
+                    merged_users.add(username)
+                    users_points_today[username] = True  # Mark as received points today
+                except Exception as e:
+                    print(f"Failed to merge PR #{pr.number}: {str(e)}")
+
+        # Update points for merged users
+        for username in merged_users:
+            current_date = datetime.now(timezone.utc).isoformat()
+            
+            if username in data['users']:
+                # Only add points if user hasn't received any today
+                data['users'][username]['points'] += 3
+                data['users'][username]['last_points_date'] = current_date
+                print(f"Added 3 points to existing user {username}")
+            else:
+                # Add new user with 3 points
+                data['users'][username] = {
+                    "points": 3,
+                    "social_media_points": 0,
+                    "last_points_date": current_date
+                }
+                print(f"Added new user {username} with 3 points")
+
+        # Write the updated data back to the file
+        with open('points.json', 'w') as f:
+            json.dump(data, f, indent=2)
+
+        # Commit and push changes
+        os.system('git config --global user.name "GitHub Actions"')
+        os.system('git config --global user.email "actions@github.com"')
+        os.system('git add points.json')
+        os.system('git commit -m "Update points for merged PRs (max 3 per day)"')
+        os.system('git push')
+      shell: python
