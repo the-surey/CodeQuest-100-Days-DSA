@@ -1,9 +1,9 @@
 name: Update Points and Merge PRs
 
 on:
-  workflow_dispatch:  # Manual triggering
+  workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *'  # Runs daily at midnight UTC
+    - cron: '0 0 * * *'
 
 jobs:
   merge-and-update:
@@ -13,6 +13,7 @@ jobs:
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
+        persist-credentials: true  # Important for pushing back changes
 
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -22,86 +23,139 @@ jobs:
     - name: Install dependencies
       run: pip install PyGithub python-dateutil
 
-    - name: Merge open PRs and update points
+    - name: Debug - Show files
+      run: ls -la
+
+    - name: Merge PRs and update points
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         import json
         import os
+        import sys
         from github import Github
         from datetime import datetime, timezone
         from dateutil import parser
 
-        # Load the current JSON data
-        with open('points.json', 'r') as f:
-            data = json.load(f)
+        # Debugging info
+        print("Python version:", sys.version)
+        print("Current directory:", os.getcwd())
+        print("Repository contents:", os.listdir('.'))
 
-        # Initialize GitHub client
-        g = Github(os.getenv('GITHUB_TOKEN'))
-        repo = g.get_repo(os.getenv('GITHUB_REPOSITORY'))
+        try:
+            # Load the JSON data
+            json_file = 'points.json'
+            if not os.path.exists(json_file):
+                raise FileNotFoundError(f"{json_file} not found in repository root")
 
-        # Get all open PRs
-        open_prs = repo.get_pulls(state='open')
+            with open(json_file, 'r') as f:
+                data = json.load(f)
+                print("Current data loaded successfully")
+        except Exception as e:
+            print(f"Error loading JSON file: {str(e)}")
+            sys.exit(1)
 
-        # Track users who have already received points today
+        try:
+            # Initialize GitHub client
+            g = Github(os.getenv('GITHUB_TOKEN'))
+            repo_name = os.getenv('GITHUB_REPOSITORY')
+            print(f"Connecting to repository: {repo_name}")
+            repo = g.get_repo(repo_name)
+        except Exception as e:
+            print(f"Error connecting to GitHub: {str(e)}")
+            sys.exit(1)
+
+        try:
+            # Get all open PRs
+            open_prs = list(repo.get_pulls(state='open'))
+            print(f"Found {len(open_prs)} open PRs")
+        except Exception as e:
+            print(f"Error fetching PRs: {str(e)}")
+            sys.exit(1)
+
         users_points_today = {}
         today = datetime.now(timezone.utc).date()
-
-        # First pass: Check when users last got points
-        for username in data['users']:
-            if 'last_points_date' in data['users'][username]:
-                last_date = parser.parse(data['users'][username]['last_points_date']).date()
-                if last_date == today:
-                    users_points_today[username] = True
-
         merged_users = set()
 
+        # Check existing users' last points date
+        for username in data.get('users', {}):
+            user_data = data['users'][username]
+            if 'last_points_date' in user_data:
+                try:
+                    last_date = parser.parse(user_data['last_points_date']).date()
+                    if last_date == today:
+                        users_points_today[username] = True
+                        print(f"User {username} already got points today")
+                except Exception as e:
+                    print(f"Error parsing date for {username}: {str(e)}")
+
+        # Process each PR
         for pr in open_prs:
             username = pr.user.login
-            print(f"Processing PR #{pr.number} from {username}")
+            print(f"\nProcessing PR #{pr.number} from {username}")
 
             # Skip if user already got points today
             if username in users_points_today:
                 print(f"Skipping {username} - already received points today")
                 continue
 
-            # Check if PR is mergeable
-            if pr.mergeable:
-                try:
-                    # Merge the PR
+            # Check mergeability
+            try:
+                if pr.mergeable:
+                    print(f"PR #{pr.number} is mergeable - attempting merge")
                     pr.merge(merge_method='merge')
-                    print(f"Merged PR #{pr.number}")
+                    print(f"Successfully merged PR #{pr.number}")
                     merged_users.add(username)
-                    users_points_today[username] = True  # Mark as received points today
-                except Exception as e:
-                    print(f"Failed to merge PR #{pr.number}: {str(e)}")
+                    users_points_today[username] = True
+                else:
+                    print(f"PR #{pr.number} is not mergeable (mergeable_state: {pr.mergeable_state})")
+            except Exception as e:
+                print(f"Failed to merge PR #{pr.number}: {str(e)}")
 
-        # Update points for merged users
-        for username in merged_users:
+        # Update points
+        if merged_users:
             current_date = datetime.now(timezone.utc).isoformat()
+            print(f"\nUpdating points for {len(merged_users)} users")
             
-            if username in data['users']:
-                # Only add points if user hasn't received any today
-                data['users'][username]['points'] += 3
-                data['users'][username]['last_points_date'] = current_date
-                print(f"Added 3 points to existing user {username}")
-            else:
-                # Add new user with 3 points
-                data['users'][username] = {
-                    "points": 3,
-                    "social_media_points": 0,
-                    "last_points_date": current_date
-                }
-                print(f"Added new user {username} with 3 points")
+            for username in merged_users:
+                if username in data['users']:
+                    data['users'][username]['points'] += 3
+                    data['users'][username]['last_points_date'] = current_date
+                    print(f"Added 3 points to {username} (Total: {data['users'][username]['points']})")
+                else:
+                    data['users'][username] = {
+                        "points": 3,
+                        "social_media_points": 0,
+                        "last_points_date": current_date
+                    }
+                    print(f"Created new entry for {username} with 3 points")
 
-        # Write the updated data back to the file
-        with open('points.json', 'w') as f:
-            json.dump(data, f, indent=2)
+            # Save changes
+            try:
+                with open(json_file, 'w') as f:
+                    json.dump(data, f, indent=2)
+                print("Successfully updated points.json")
+            except Exception as e:
+                print(f"Error saving JSON file: {str(e)}")
+                sys.exit(1)
 
-        # Commit and push changes
-        os.system('git config --global user.name "GitHub Actions"')
-        os.system('git config --global user.email "actions@github.com"')
-        os.system('git add points.json')
-        os.system('git commit -m "Update points for merged PRs (max 3 per day)"')
-        os.system('git push')
+            # Commit changes
+            try:
+                os.system('git config --global user.name "GitHub Actions"')
+                os.system('git config --global user.email "actions@github.com"')
+                os.system('git add points.json')
+                os.system('git commit -m "Automated points update for merged PRs"')
+                push_result = os.system('git push origin HEAD:$GITHUB_REF')
+                if push_result != 0:
+                    print("Git push failed!")
+                    sys.exit(1)
+                print("Successfully pushed changes to repository")
+            except Exception as e:
+                print(f"Error committing changes: {str(e)}")
+                sys.exit(1)
+        else:
+            print("No users eligible for points update")
       shell: python
+
+    - name: Debug - Show git status
+      run: git status
