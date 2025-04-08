@@ -7,7 +7,7 @@
       "last_points_date": "2025-04-08T12:37:46.875267+00:00"
     },
     "Utkarsh-0003": {
-      "points": 24,
+      "points": 9,
       "social_media_points": 0
     },
     "winsome-nandini": {
@@ -50,7 +50,7 @@
       "social_media_points": 0
     },
     "Abhishek05eccs": {
-      "points": 27,
+      "points": 9,
       "social_media_points": 0,
       "last_points_date": "2025-04-08T12:37:46.875267+00:00"
     },
@@ -113,7 +113,7 @@
       "last_points_date": "2025-04-08T17:49:26.851313+00:00"
     },
     "Yamini113": {
-      "points": 24,
+      "points": 6,
       "social_media_points": 0
     },
     "Ranyaa999": {
@@ -836,6 +836,27 @@
       "pr_number": 117,
       "date": "2025-04-07T18:42:45.422807+00:00",
       "reason": "Daily PR Challenge: PR #117"
+    },
+    {
+      "username": "Abhishek05eccs",
+      "points": 3,
+      "pr_number": 141,
+      "date": "2025-04-08T18:45:10.233855+00:00",
+      "reason": "Daily PR Challenge: PR #141"
+    },
+    {
+      "username": "Utkarsh-0003",
+      "points": 3,
+      "pr_number": 140,
+      "date": "2025-04-08T18:45:16.792440+00:00",
+      "reason": "Daily PR Challenge: PR #140"
+    },
+    {
+      "username": "Yamini113",
+      "points": 3,
+      "pr_number": 139,
+      "date": "2025-04-08T18:45:25.685803+00:00",
+      "reason": "Daily PR Challenge: PR #139"
     }
   ],
   "metadata": {
@@ -845,8 +866,8 @@
     "event_start_date": "2025-04-01",
     "last_updated": "",
     "total_participants": 26,
-    "total_points_distributed": 408
+    "total_points_distributed": 540
   },
-  "total_points": 408,
-  "last_updated": "2025-04-07T18:43:43.495611+00:00"
+  "total_points": 540,
+  "last_updated": "2025-04-08T18:49:54.930605+00:00"
 }
