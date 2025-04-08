@@ -30,6 +30,7 @@ jobs:
         import json
         import os
         import sys
+        import time
         from github import Github
         from datetime import datetime, timezone
         from dateutil import parser
@@ -39,14 +40,16 @@ jobs:
         print("Current directory:", os.getcwd())
         print("Repository contents:", os.listdir('.'))
 
+        # Load points data
         try:
             with open('points.json', 'r') as f:
                 data = json.load(f)
-                print("Current data loaded successfully")
+            print("Current data loaded successfully")
         except Exception as e:
             print(f"Error loading JSON file: {str(e)}")
             sys.exit(1)
 
+        # Initialize GitHub client
         try:
             g = Github(os.getenv('GITHUB_TOKEN'))
             repo = g.get_repo(os.getenv('GITHUB_REPOSITORY'))
@@ -55,22 +58,23 @@ jobs:
             print(f"Error connecting to GitHub: {str(e)}")
             sys.exit(1)
 
-        # First pull any remote changes
-        os.system('git pull origin main')
+        # Sync with remote
+        os.system('git config --global user.name "GitHub Actions"')
+        os.system('git config --global user.email "actions@github.com"')
+        os.system('git pull --rebase origin main')
 
-        users_points_today = {}
+        # Track points
         today = datetime.now(timezone.utc).date()
         merged_users = set()
 
-        # Check existing users' last points date
+        # Check existing points today
         for username in data.get('users', {}):
             if 'last_points_date' in data['users'][username]:
                 last_date = parser.parse(data['users'][username]['last_points_date']).date()
                 if last_date == today:
-                    users_points_today[username] = True
                     print(f"User {username} already got points today")
 
-        # Process open PRs
+        # Process PRs with retry for mergeability
         open_prs = list(repo.get_pulls(state='open'))
         print(f"Found {len(open_prs)} open PRs")
 
@@ -78,23 +82,49 @@ jobs:
             username = pr.user.login
             print(f"\nProcessing PR #{pr.number} from {username}")
 
-            if username in users_points_today:
-                print(f"Skipping {username} - already received points today")
-                continue
+            # Check if user already got points today
+            user_data = data['users'].get(username, {})
+            if 'last_points_date' in user_data:
+                last_date = parser.parse(user_data['last_points_date']).date()
+                if last_date == today:
+                    print(f"Skipping {username} - already received points today")
+                    continue
 
-            try:
-                if pr.mergeable:
-                    print(f"Merging PR #{pr.number}")
-                    pr.merge(merge_method='merge')
-                    merged_users.add(username)
-                    users_points_today[username] = True
-                    print(f"Successfully merged PR #{pr.number}")
-                else:
-                    print(f"PR #{pr.number} not mergeable (state: {pr.mergeable_state})")
-            except Exception as e:
-                print(f"Error merging PR #{pr.number}: {str(e)}")
+            # Handle mergeability with retries
+            max_merge_retries = 3
+            merged = False
+            
+            for attempt in range(max_merge_retries):
+                try:
+                    # Refresh PR data
+                    pr = repo.get_pull(pr.number)
+                    
+                    if pr.merged:
+                        print(f"PR #{pr.number} already merged")
+                        merged = True
+                        break
+                        
+                    if pr.mergeable:
+                        print(f"Attempting to merge PR #{pr.number} (attempt {attempt + 1})")
+                        pr.merge(merge_method='merge')
+                        merged = True
+                        print(f"Successfully merged PR #{pr.number}")
+                        break
+                    else:
+                        print(f"PR #{pr.number} not mergeable (state: {pr.mergeable_state})")
+                        if pr.mergeable_state == "unknown":
+                            print("Waiting 5 seconds for GitHub to calculate mergeability...")
+                            time.sleep(5)
+                            continue
+                        break
+                except Exception as e:
+                    print(f"Merge attempt {attempt + 1} failed: {str(e)}")
+                    time.sleep(5)
 
-        # Update points
+            if merged:
+                merged_users.add(username)
+
+        # Update points if any PRs were merged
         if merged_users:
             current_date = datetime.now(timezone.utc).isoformat()
             print(f"\nUpdating points for {len(merged_users)} users")
@@ -112,28 +142,25 @@ jobs:
                     }
                     print(f"Created new entry for {username}")
 
-            # Save changes
+            # Save and push changes
             with open('points.json', 'w') as f:
                 json.dump(data, f, indent=2)
 
-            # Commit and push
-            os.system('git config --global user.name "GitHub Actions"')
-            os.system('git config --global user.email "actions@github.com"')
             os.system('git add points.json')
             os.system('git commit -m "Automated points update for merged PRs"')
             
-            # Handle push with retry
-            max_retries = 3
-            for attempt in range(max_retries):
-                print(f"Push attempt {attempt + 1}/{max_retries}")
-                result = os.system('git pull --rebase origin main && git push origin main')
-                if result == 0:
+            # Push with retries
+            max_push_retries = 3
+            for attempt in range(max_push_retries):
+                print(f"Push attempt {attempt + 1}/{max_push_retries}")
+                if os.system('git pull --rebase origin main && git push origin main') == 0:
                     print("Push successful")
                     break
-                print(f"Push failed, retrying...")
+                print("Push failed, retrying...")
+                time.sleep(5)
             else:
                 print("Failed to push after multiple attempts")
                 sys.exit(1)
         else:
-            print("No users eligible for points update")
+            print("No PRs were merged - no points to update")
       shell: python
