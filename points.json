@@ -94,7 +94,7 @@
       "social_media_points": 4
     },
     "Nataraj-chandrasekaran": {
-      "points": 27,
+      "points": 9,
       "social_media": "",
       "last_points_date": "2025-04-08T17:49:26.851313+00:00"
     },
@@ -858,6 +858,13 @@
       "pr_number": 139,
       "date": "2025-04-08T18:45:25.685803+00:00",
       "reason": "Daily PR Challenge: PR #139"
+    },
+    {
+      "username": "Nataraj-chandrasekaran",
+      "points": 3,
+      "pr_number": 161,
+      "date": "2025-04-09T18:44:27.598344+00:00",
+      "reason": "Daily PR Challenge: PR #161"
     }
   ],
   "metadata": {
@@ -867,8 +874,8 @@
     "event_start_date": "2025-04-01",
     "last_updated": "",
     "total_participants": 26,
-    "total_points_distributed": 540
+    "total_points_distributed": 588
   },
-  "total_points": 540,
-  "last_updated": "2025-04-08T18:50:11.300157+00:00"
+  "total_points": 588,
+  "last_updated": "2025-04-09T18:51:49.905750+00:00"
 }
