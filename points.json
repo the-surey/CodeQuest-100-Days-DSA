@@ -51,7 +51,7 @@
       "social_media_points": 0
     },
     "Abhishek05eccs": {
-      "points": 12,
+      "points": 15,
       "social_media_points": 0,
       "last_points_date": "2025-04-09T13:36:49.939364+00:00"
     },
@@ -949,6 +949,13 @@
       "pr_number": 163,
       "date": "2025-04-10T18:44:21.482444+00:00",
       "reason": "Daily PR Challenge: PR #163"
+    },
+    {
+      "username": "Abhishek05eccs",
+      "points": 3,
+      "pr_number": 178,
+      "date": "2025-04-10T18:52:00.043475+00:00",
+      "reason": "Daily PR Challenge: PR #178"
     }
   ],
   "metadata": {
@@ -960,6 +967,6 @@
     "total_participants": 26,
     "total_points_distributed": 360
   },
-  "total_points": 360,
-  "last_updated": "2025-04-10T18:51:43.677677+00:00"
+  "total_points": 363,
+  "last_updated": "2025-04-10T18:52:19.860621+00:00"
 }
