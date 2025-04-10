@@ -1,7 +1,7 @@
 import re
 password=input("Enter your password: ")
 errors=[]
-if not len(password) >=8 :
+if len(password) <=8 :
     print("Weak Password (Password should be atleast 8 characters)")
 if not any(char.isupper() for char in password):
         errors.append("a uppercase character")
