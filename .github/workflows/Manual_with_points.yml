@@ -2,8 +2,6 @@ name: Update Points and Merge PRs
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 0 * * *'
 
 jobs:
   merge-and-update:
