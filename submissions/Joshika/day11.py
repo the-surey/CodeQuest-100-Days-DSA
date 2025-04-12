@@ -1,3 +1,3 @@
 a=input("Enter numbers:").split()
-order=a.sort()
+a.sort()
 print(a)
