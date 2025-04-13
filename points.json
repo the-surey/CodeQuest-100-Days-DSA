@@ -17,7 +17,7 @@
       "last_points_date": "2025-04-13T03:04:42.264997+00:00"
     },
     "Ayush-vishwakarma-git": {
-      "points": 39,
+      "points": 12,
       "social_media_points": 0,
       "last_points_date": "2025-04-12T18:29:40.904033+00:00"
     },
@@ -51,7 +51,7 @@
       "social_media_points": 0
     },
     "Abhishek05eccs": {
-      "points": 33,
+      "points": 15,
       "social_media_points": 0,
       "last_points_date": "2025-04-12T11:29:18.588013+00:00"
     },
@@ -962,6 +962,20 @@
       "pr_number": 178,
       "date": "2025-04-10T18:52:00.043475+00:00",
       "reason": "Daily PR Challenge: PR #178"
+    },
+    {
+      "username": "Ayush-vishwakarma-git",
+      "points": 3,
+      "pr_number": 229,
+      "date": "2025-04-13T18:41:23.336435+00:00",
+      "reason": "Daily PR Challenge: PR #229"
+    },
+    {
+      "username": "Abhishek05eccs",
+      "points": 3,
+      "pr_number": 228,
+      "date": "2025-04-13T18:41:28.921322+00:00",
+      "reason": "Daily PR Challenge: PR #228"
     }
   ],
   "metadata": {
@@ -970,9 +984,9 @@
     "max_points_per_day": 3,
     "event_start_date": "2025-04-01",
     "last_updated": "",
-    "total_participants": 26,
-    "total_points_distributed": 360
+    "total_participants": 27,
+    "total_points_distributed": 774
   },
-  "total_points": 783,
-  "last_updated": "2025-04-12T18:55:41.240148+00:00"
+  "total_points": 774,
+  "last_updated": "2025-04-13T18:57:34.903255+00:00"
 }
