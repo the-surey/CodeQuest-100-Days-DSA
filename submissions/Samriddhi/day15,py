@@ -1,0 +1,19 @@
+list=[]
+k=int(input("Enter Number of items i list"))
+for i in range(k):
+    n=int(input("Enter Number"))
+    list.append(n)
+p=sum(list)
+print("Sum of the list is",p)
+            
+
+
+
+
+
+
+
+
+
+
+
