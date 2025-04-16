@@ -994,13 +994,11 @@
     }
   ],
   "metadata": {
-    "event": "Daily PR Challenge",
+    "event": "April 1-5 PR Challenge",
     "points_per_pr": 3,
-    "max_points_per_day": 3,
-    "event_start_date": "2025-04-01",
-    "last_updated": "",
-    "total_participants": 27,
-    "total_points_distributed": 774
+    "max_points": 15,
+    "calculated_at": "2025-04-16T01:40:08.598435+00:00",
+    "total_participants": 30
   },
   "total_points": 1017,
   "last_updated": "2025-04-15T19:06:10.233622+00:00"
