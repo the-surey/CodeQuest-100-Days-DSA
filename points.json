@@ -1033,6 +1033,13 @@
       "pr_number": 253,
       "date": "2025-04-15T18:45:50.383322+00:00",
       "reason": "Daily PR Challenge: PR #253"
+    },
+    {
+      "username": "joshika0805",
+      "points": 3,
+      "pr_number": 296,
+      "date": "2025-04-17T18:44:31.555586+00:00",
+      "reason": "Daily PR Challenge: PR #296"
     }
   ],
   "metadata": {
@@ -1042,8 +1049,8 @@
     "event_start_date": "2025-04-01",
     "last_updated": "",
     "total_participants": 30,
-    "total_points_distributed": 861
+    "total_points_distributed": 984
   },
-  "total_points": 951,
-  "last_updated": "2025-04-16T19:10:36.998060+00:00"
+  "total_points": 984,
+  "last_updated": "2025-04-17T19:11:02.746494+00:00"
 }
