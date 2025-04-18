@@ -1,3 +1,187 @@
+# Python Core Data Types Explained
+
+## 1. Strings (`str`)
+**Immutable** sequence of Unicode characters
+
+```python
+s = "Hello Python"
+
+# Key Features:
+- Indexing: s[0] → 'H'
+- Slicing: s[1:5] → 'ello'
+- Concatenation: s + "!" → "Hello Python!"
+- Methods: s.upper(), s.split(), s.replace()
+
+# Common Methods:
+.lower()       # Convert to lowercase
+.upper()       # Convert to uppercase
+.strip()       # Remove whitespace
+.split()       # Split into list
+.join()        # Combine list into string
+.format()      # String formatting
+f-strings      # f"Value: {variable}"
+
+# Example:
+name = "Alice"
+print(f"Hello {name}!")  # Hello Alice!
+```
+
+## 2. Lists (`list`)
+**Mutable** ordered sequence
+
+```python
+my_list = [1, 2, 3, 'a', 'b']
+
+# Key Features:
+- Ordered (maintains insertion order)
+- Changeable: my_list[0] = 99
+- Allows duplicates
+- Can contain mixed types
+
+# Common Operations:
+.append(x)     # Add item to end
+.insert(i,x)   # Insert at position
+.remove(x)     # Remove first occurrence
+.pop()         # Remove and return last item
+.sort()        # Sort in place
+.reverse()     # Reverse in place
+len(my_list)   # Get length
+
+# Example:
+fruits = ['apple', 'banana']
+fruits.append('orange')  # ['apple', 'banana', 'orange']
+```
+
+## 3. Tuples (`tuple`)
+**Immutable** ordered sequence
+
+```python
+my_tuple = (1, 2, 3, 'a')
+
+# Key Features:
+- Faster than lists
+- Immutable (cannot change after creation)
+- Often used for fixed collections
+- Can be used as dictionary keys
+
+# Common Operations:
+.count(x)      # Count occurrences
+.index(x)      # Find first index
+len(my_tuple)  # Get length
+
+# Example:
+coordinates = (45.0, -90.0)
+x, y = coordinates  # Tuple unpacking
+```
+
+## 4. Dictionaries (`dict`)
+**Mutable** key-value pairs
+
+```python
+my_dict = {'name': 'Alice', 'age': 25}
+
+# Key Features:
+- Unordered (before Python 3.7)
+- Keys must be immutable (strings, numbers, tuples)
+- Values can be any type
+- Fast lookups
+
+# Common Operations:
+.keys()        # Get all keys
+.values()      # Get all values
+.items()       # Get key-value pairs
+.get(key)      # Safely get value
+.update()      # Merge dictionaries
+
+# Example:
+person = {'name': 'Bob', 'age': 30}
+person['job'] = 'Developer'  # Add new key
+```
+
+## 5. Sets (`set`)
+**Mutable** unordered unique collection
+
+```python
+my_set = {1, 2, 3}
+
+# Key Features:
+- Unordered
+- No duplicates
+- Mathematical set operations
+- Faster membership testing than lists
+
+# Common Operations:
+.add(x)        # Add element
+.remove(x)     # Remove element
+.union()       # |
+.intersection() # &
+.difference()  # -
+.symmetric_difference() # ^
+
+# Example:
+primes = {2, 3, 5, 7}
+primes.add(11)  # {2, 3, 5, 7, 11}
+```
+
+## 6. Range (`range`)
+Immutable sequence of numbers
+
+```python
+range(5)        # 0,1,2,3,4
+range(1,6)      # 1,2,3,4,5
+range(10,0,-1)  # 10,9,...,1
+
+# Key Features:
+- Memory efficient (generates numbers on demand)
+- Commonly used in for loops
+- Supports slicing
+
+# Example:
+for i in range(3):
+    print(i)  # 0 1 2
+```
+
+## 7. Bytes/Bytearray
+For binary data
+
+```python
+bytes_data = b'hello'
+bytearray_data = bytearray(b'hello')
+
+# Key Differences:
+- bytes: immutable
+- bytearray: mutable
+```
+
+## Type Conversion
+```python
+int('10')      # String to integer
+float('3.14')  # String to float
+str(100)       # Number to string
+list('abc')    # String to list → ['a','b','c']
+tuple([1,2,3]) # List to tuple → (1,2,3)
+set([1,1,2])   # List to set → {1,2}
+dict([('a',1)]) # List of tuples to dict → {'a':1}
+```
+
+## Memory Comparison
+| Type      | Mutable | Ordered | Indexed | Duplicates |
+|-----------|---------|---------|---------|------------|
+| List      | ✔       | ✔       | ✔       | ✔          |
+| Tuple     | ✖       | ✔       | ✔       | ✔          |
+| String    | ✖       | ✔       | ✔       | ✔          |
+| Set       | ✔       | ✖       | ✖       | ✖          |
+| Dictionary| ✔       | ✔*      | ✖       | Keys: ✖    |
+
+* Ordered since Python 3.7
+
+## When to Use Each
+- **List**: When you need a modifiable ordered collection
+- **Tuple**: For fixed data that shouldn't change
+- **Set**: When you need unique elements/fast membership tests
+- **Dictionary**: For key-value relationships
+- **String**: All text processing
+
 
 # Python Core Data Types Explained
 
@@ -182,192 +366,7 @@ dict([('a',1)]) # List of tuples to dict → {'a':1}
 - **Set**: When you need unique elements/fast membership tests
 - **Dictionary**: For key-value relationships
 - **String**: All text processing
-```
 
-# Python Core Data Types Explained
-
-## 1. Strings (`str`)
-**Immutable** sequence of Unicode characters
-
-```python
-s = "Hello Python"
-
-# Key Features:
-- Indexing: s[0] → 'H'
-- Slicing: s[1:5] → 'ello'
-- Concatenation: s + "!" → "Hello Python!"
-- Methods: s.upper(), s.split(), s.replace()
-
-# Common Methods:
-.lower()       # Convert to lowercase
-.upper()       # Convert to uppercase
-.strip()       # Remove whitespace
-.split()       # Split into list
-.join()        # Combine list into string
-.format()      # String formatting
-f-strings      # f"Value: {variable}"
-
-# Example:
-name = "Alice"
-print(f"Hello {name}!")  # Hello Alice!
-```
-
-## 2. Lists (`list`)
-**Mutable** ordered sequence
-
-```python
-my_list = [1, 2, 3, 'a', 'b']
-
-# Key Features:
-- Ordered (maintains insertion order)
-- Changeable: my_list[0] = 99
-- Allows duplicates
-- Can contain mixed types
-
-# Common Operations:
-.append(x)     # Add item to end
-.insert(i,x)   # Insert at position
-.remove(x)     # Remove first occurrence
-.pop()         # Remove and return last item
-.sort()        # Sort in place
-.reverse()     # Reverse in place
-len(my_list)   # Get length
-
-# Example:
-fruits = ['apple', 'banana']
-fruits.append('orange')  # ['apple', 'banana', 'orange']
-```
-
-## 3. Tuples (`tuple`)
-**Immutable** ordered sequence
-
-```python
-my_tuple = (1, 2, 3, 'a')
-
-# Key Features:
-- Faster than lists
-- Immutable (cannot change after creation)
-- Often used for fixed collections
-- Can be used as dictionary keys
-
-# Common Operations:
-.count(x)      # Count occurrences
-.index(x)      # Find first index
-len(my_tuple)  # Get length
-
-# Example:
-coordinates = (45.0, -90.0)
-x, y = coordinates  # Tuple unpacking
-```
-
-## 4. Dictionaries (`dict`)
-**Mutable** key-value pairs
-
-```python
-my_dict = {'name': 'Alice', 'age': 25}
-
-# Key Features:
-- Unordered (before Python 3.7)
-- Keys must be immutable (strings, numbers, tuples)
-- Values can be any type
-- Fast lookups
-
-# Common Operations:
-.keys()        # Get all keys
-.values()      # Get all values
-.items()       # Get key-value pairs
-.get(key)      # Safely get value
-.update()      # Merge dictionaries
-
-# Example:
-person = {'name': 'Bob', 'age': 30}
-person['job'] = 'Developer'  # Add new key
-```
-
-## 5. Sets (`set`)
-**Mutable** unordered unique collection
-
-```python
-my_set = {1, 2, 3}
-
-# Key Features:
-- Unordered
-- No duplicates
-- Mathematical set operations
-- Faster membership testing than lists
-
-# Common Operations:
-.add(x)        # Add element
-.remove(x)     # Remove element
-.union()       # |
-.intersection() # &
-.difference()  # -
-.symmetric_difference() # ^
-
-# Example:
-primes = {2, 3, 5, 7}
-primes.add(11)  # {2, 3, 5, 7, 11}
-```
-
-## 6. Range (`range`)
-Immutable sequence of numbers
-
-```python
-range(5)        # 0,1,2,3,4
-range(1,6)      # 1,2,3,4,5
-range(10,0,-1)  # 10,9,...,1
-
-# Key Features:
-- Memory efficient (generates numbers on demand)
-- Commonly used in for loops
-- Supports slicing
-
-# Example:
-for i in range(3):
-    print(i)  # 0 1 2
-```
-
-## 7. Bytes/Bytearray
-For binary data
-
-```python
-bytes_data = b'hello'
-bytearray_data = bytearray(b'hello')
-
-# Key Differences:
-- bytes: immutable
-- bytearray: mutable
-```
-
-## Type Conversion
-```python
-int('10')      # String to integer
-float('3.14')  # String to float
-str(100)       # Number to string
-list('abc')    # String to list → ['a','b','c']
-tuple([1,2,3]) # List to tuple → (1,2,3)
-set([1,1,2])   # List to set → {1,2}
-dict([('a',1)]) # List of tuples to dict → {'a':1}
-```
-
-## Memory Comparison
-| Type      | Mutable | Ordered | Indexed | Duplicates |
-|-----------|---------|---------|---------|------------|
-| List      | ✔       | ✔       | ✔       | ✔          |
-| Tuple     | ✖       | ✔       | ✔       | ✔          |
-| String    | ✖       | ✔       | ✔       | ✔          |
-| Set       | ✔       | ✖       | ✖       | ✖          |
-| Dictionary| ✔       | ✔*      | ✖       | Keys: ✖    |
-
-* Ordered since Python 3.7
-
-## When to Use Each
-- **List**: When you need a modifiable ordered collection
-- **Tuple**: For fixed data that shouldn't change
-- **Set**: When you need unique elements/fast membership tests
-- **Dictionary**: For key-value relationships
-- **String**: All text processing
-```
 
 This covers:
 - Detailed explanations of each core type
@@ -587,7 +586,7 @@ x = x + 5               lst.append(4)
    - Prefer sets for membership testing
    - Use dicts for key-value relationships with fast lookups
    - Lists for dynamic arrays (but deque for queues)
-```
+
 
 This covers:
 - Deep dive into mutability with memory diagrams
