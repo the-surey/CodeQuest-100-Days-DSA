@@ -1,6 +1,4 @@
-Here's a **detailed explanation of Python's core data types** in Markdown format, covering lists, tuples, strings, and other fundamental types with examples:
 
-```markdown
 # Python Core Data Types Explained
 
 ## 1. Strings (`str`)
