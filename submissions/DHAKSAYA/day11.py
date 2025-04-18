@@ -1,4 +1,4 @@
-l=list(map(int,input("Enter numbers:").split()))
+l=list(map(int,input("Enter numbers: ").split()))
 l.sort()
 print("Sorted list: ",end="")
 for i in (l):
