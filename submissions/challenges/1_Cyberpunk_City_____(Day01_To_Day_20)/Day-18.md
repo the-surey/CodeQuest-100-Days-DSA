@@ -126,4 +126,3 @@ You’ve peeled back the layers of the maze and revealed its hidden depth. Every
 
 ---
 
-Let me know if you want this in markdown file format or hosted as a public repo template!
