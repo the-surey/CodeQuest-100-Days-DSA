@@ -8,7 +8,7 @@ def fibonacci(n):
     else:
         print(num1,end=" ")
         print(num2,end=" ")
-        for count in range(2,n):
+        for _ in range(2,n):
             num = num1 + num2
             print(num,end=" ")
             num1 = num2
