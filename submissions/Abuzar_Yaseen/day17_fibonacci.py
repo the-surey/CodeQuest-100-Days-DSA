@@ -8,12 +8,11 @@ def fibonacci(n):
     else:
         print(num1,end=" ")
         print(num2,end=" ")
-        for i in range(2,n):
+        for count in range(2,n):
             num = num1 + num2
             print(num,end=" ")
             num1 = num2
             num2 = num
-            
 number = int(input("Enter the number of terms: "))
 print("Fibonacci sequence: ",end=" ")
 fibonacci(number)
