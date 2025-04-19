@@ -22,7 +22,7 @@
       "last_points_date": "2025-04-18T04:38:25.671819+00:00"
     },
     "Devilwelcometohell": {
-      "points": 60,
+      "points": 12,
       "social_media_points": 8.5,
       "last_points_date": "2025-04-18T16:20:48.258273+00:00"
     },
@@ -42,7 +42,7 @@
       "last_points_date": "2025-04-19T12:50:38.710791+00:00"
     },
     "Avantikaay": {
-      "points": 48,
+      "points": 12,
       "social_media_points": 0,
       "last_points_date": "2025-04-18T16:20:48.258273+00:00"
     },
@@ -51,7 +51,7 @@
       "social_media_points": 0
     },
     "Abhishek05eccs": {
-      "points": 63,
+      "points": 18,
       "social_media_points": 8.5,
       "last_points_date": "2025-04-18T04:38:25.671819+00:00"
     },
@@ -1075,6 +1075,27 @@
       "pr_number": 310,
       "date": "2025-04-18T18:44:03.486794+00:00",
       "reason": "Daily PR Challenge: PR #310"
+    },
+    {
+      "username": "Abhishek05eccs",
+      "points": 3,
+      "pr_number": 327,
+      "date": "2025-04-19T18:41:04.845489+00:00",
+      "reason": "Daily PR Challenge: PR #327"
+    },
+    {
+      "username": "Avantikaay",
+      "points": 3,
+      "pr_number": 326,
+      "date": "2025-04-19T18:41:11.373262+00:00",
+      "reason": "Daily PR Challenge: PR #326"
+    },
+    {
+      "username": "Devilwelcometohell",
+      "points": 3,
+      "pr_number": 325,
+      "date": "2025-04-19T18:41:17.513396+00:00",
+      "reason": "Daily PR Challenge: PR #325"
     }
   ],
   "metadata": {
@@ -1084,8 +1105,8 @@
     "event_start_date": "2025-04-01",
     "last_updated": "",
     "total_participants": 30,
-    "total_points_distributed": 930
+    "total_points_distributed": 825
   },
-  "total_points": 930,
-  "last_updated": "2025-04-18T19:13:19.352532+00:00"
+  "total_points": 825,
+  "last_updated": "2025-04-19T19:13:11.636883+00:00"
 }
