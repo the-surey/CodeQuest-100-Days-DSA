@@ -51,7 +51,7 @@
       "social_media_points": 0
     },
     "Abhishek05eccs": {
-      "points": 18,
+      "points": 21,
       "social_media_points": 8.5,
       "last_points_date": "2025-04-18T04:38:25.671819+00:00"
     },
@@ -110,7 +110,7 @@
       "last_points_date": "2025-04-18T16:20:48.258273+00:00"
     },
     "joshika0805": {
-      "points": 15,
+      "points": 18,
       "social_media_points": 0,
       "last_points_date": "2025-04-16T18:17:37.231516+00:00"
     },
@@ -129,12 +129,12 @@
       "last_points_date": "2025-04-12T08:37:12.152930+00:00"
     },
     "Dhaksaya": {
-      "points": 15,
+      "points": 6,
       "social_media_points": 0,
       "last_points_date": "2025-04-19T12:50:38.710791+00:00"
     },
     "krishna-00001": {
-      "points": 12,
+      "points": 3,
       "social_media_points": 0,
       "last_points_date": "2025-04-20T17:00:39.081403+00:00"
     },
@@ -1096,6 +1096,41 @@
       "pr_number": 325,
       "date": "2025-04-19T18:41:17.513396+00:00",
       "reason": "Daily PR Challenge: PR #325"
+    },
+    {
+      "username": "krishna-00001",
+      "points": 3,
+      "pr_number": 344,
+      "date": "2025-04-20T18:42:49.000670+00:00",
+      "reason": "Daily PR Challenge: PR #344"
+    },
+    {
+      "username": "Ayush-vishwakarma-git",
+      "points": 3,
+      "pr_number": 343,
+      "date": "2025-04-20T18:42:52.983133+00:00",
+      "reason": "Daily PR Challenge: PR #343"
+    },
+    {
+      "username": "Abhishek05eccs",
+      "points": 3,
+      "pr_number": 342,
+      "date": "2025-04-20T18:43:00.952857+00:00",
+      "reason": "Daily PR Challenge: PR #342"
+    },
+    {
+      "username": "joshika0805",
+      "points": 3,
+      "pr_number": 341,
+      "date": "2025-04-20T18:43:06.735128+00:00",
+      "reason": "Daily PR Challenge: PR #341"
+    },
+    {
+      "username": "Dhaksaya",
+      "points": 3,
+      "pr_number": 340,
+      "date": "2025-04-20T18:43:12.429665+00:00",
+      "reason": "Daily PR Challenge: PR #340"
     }
   ],
   "metadata": {
@@ -1105,8 +1140,8 @@
     "event_start_date": "2025-04-01",
     "last_updated": "",
     "total_participants": 30,
-    "total_points_distributed": 825
+    "total_points_distributed": 846
   },
-  "total_points": 825,
-  "last_updated": "2025-04-19T19:13:45.689335+00:00"
+  "total_points": 846,
+  "last_updated": "2025-04-20T19:15:34.002678+00:00"
 }
