@@ -1,5 +1,3 @@
-Here's a fully English version of your challenge while maintaining the fun, engaging tone:
-
 ---
 
 # **Day 23: The Word Collector Challenge** 📚✨
