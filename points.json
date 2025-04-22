@@ -1,7 +1,7 @@
 {
   "users": {
     "22MH1A04H3": {
-      "points": 12,
+      "points": 15,
       "social_media": "",
       "social_media_points": 0,
       "last_points_date": "2025-04-20T17:00:39.081403+00:00"
@@ -32,12 +32,12 @@
       "last_points_date": "2025-04-08T17:49:26.851313+00:00"
     },
     "shagun111484": {
-      "points": 12,
+      "points": 15,
       "social_media_points": 0,
       "last_points_date": "2025-04-20T17:00:39.081403+00:00"
     },
     "ABUZAR-2003": {
-      "points": 15,
+      "points": 18,
       "social_media_points": 0,
       "last_points_date": "2025-04-20T17:00:39.081403+00:00"
     },
@@ -51,7 +51,7 @@
       "social_media_points": 0
     },
     "Abhishek05eccs": {
-      "points": 24,
+      "points": 27,
       "social_media_points": 8.5,
       "last_points_date": "2025-04-18T04:38:25.671819+00:00"
     },
@@ -100,7 +100,7 @@
       "last_points_date": "2025-04-20T17:00:39.081403+00:00"
     },
     "Mohan18Kumar": {
-      "points": 15,
+      "points": 18,
       "social_media": "",
       "last_points_date": "2025-04-20T17:00:39.081403+00:00"
     },
@@ -110,7 +110,7 @@
       "last_points_date": "2025-04-18T16:20:48.258273+00:00"
     },
     "joshika0805": {
-      "points": 21,
+      "points": 24,
       "social_media_points": 0,
       "last_points_date": "2025-04-16T18:17:37.231516+00:00"
     },
@@ -119,7 +119,7 @@
       "social_media_points": 0
     },
     "Ranyaa999": {
-      "points": 57,
+      "points": 9,
       "social_media_points": 0,
       "last_points_date": "2025-04-20T17:00:39.081403+00:00"
     },
@@ -129,7 +129,7 @@
       "last_points_date": "2025-04-12T08:37:12.152930+00:00"
     },
     "Dhaksaya": {
-      "points": 9,
+      "points": 12,
       "social_media_points": 0,
       "last_points_date": "2025-04-19T12:50:38.710791+00:00"
     },
@@ -142,6 +142,10 @@
       "points": 3,
       "social_media_points": 0,
       "last_points_date": "2025-04-15T13:04:48.287773+00:00"
+    },
+    "Teju1405": {
+      "points": 3,
+      "social_media_points": 0
     }
   },
   "history": [
@@ -1180,6 +1184,69 @@
       "pr_number": 345,
       "date": "2025-04-21T18:46:03.546402+00:00",
       "reason": "Daily PR Challenge: PR #345"
+    },
+    {
+      "username": "Ranyaa999",
+      "points": 3,
+      "pr_number": 361,
+      "date": "2025-04-22T18:45:10.777940+00:00",
+      "reason": "Daily PR Challenge: PR #361"
+    },
+    {
+      "username": "joshika0805",
+      "points": 3,
+      "pr_number": 360,
+      "date": "2025-04-22T18:45:16.866819+00:00",
+      "reason": "Daily PR Challenge: PR #360"
+    },
+    {
+      "username": "22MH1A04H3",
+      "points": 3,
+      "pr_number": 359,
+      "date": "2025-04-22T18:45:23.047521+00:00",
+      "reason": "Daily PR Challenge: PR #359"
+    },
+    {
+      "username": "Mohan18Kumar",
+      "points": 3,
+      "pr_number": 358,
+      "date": "2025-04-22T18:45:29.367467+00:00",
+      "reason": "Daily PR Challenge: PR #358"
+    },
+    {
+      "username": "Dhaksaya",
+      "points": 3,
+      "pr_number": 357,
+      "date": "2025-04-22T18:45:35.158604+00:00",
+      "reason": "Daily PR Challenge: PR #357"
+    },
+    {
+      "username": "Teju1405",
+      "points": 3,
+      "pr_number": 356,
+      "date": "2025-04-22T18:45:43.665053+00:00",
+      "reason": "Daily PR Challenge: PR #356"
+    },
+    {
+      "username": "ABUZAR-2003",
+      "points": 3,
+      "pr_number": 355,
+      "date": "2025-04-22T18:45:49.927582+00:00",
+      "reason": "Daily PR Challenge: PR #355"
+    },
+    {
+      "username": "Abhishek05eccs",
+      "points": 3,
+      "pr_number": 354,
+      "date": "2025-04-22T18:45:55.950173+00:00",
+      "reason": "Daily PR Challenge: PR #354"
+    },
+    {
+      "username": "shagun111484",
+      "points": 3,
+      "pr_number": 353,
+      "date": "2025-04-22T18:46:02.147616+00:00",
+      "reason": "Daily PR Challenge: PR #353"
     }
   ],
   "metadata": {
@@ -1188,9 +1255,9 @@
     "max_points_per_day": 3,
     "event_start_date": "2025-04-01",
     "last_updated": "",
-    "total_participants": 30,
-    "total_points_distributed": 735
+    "total_participants": 31,
+    "total_points_distributed": 711
   },
-  "total_points": 735,
-  "last_updated": "2025-04-21T19:19:19.386230+00:00"
+  "total_points": 711,
+  "last_updated": "2025-04-22T19:19:05.067285+00:00"
 }
