@@ -1,7 +1,7 @@
 {
   "users": {
     "22MH1A04H3": {
-      "points": 21,
+      "points": 24,
       "social_media": "",
       "social_media_points": 0,
       "last_points_date": "2025-04-20T17:00:39.081403+00:00"
@@ -32,7 +32,7 @@
       "last_points_date": "2025-04-08T17:49:26.851313+00:00"
     },
     "shagun111484": {
-      "points": 21,
+      "points": 24,
       "social_media_points": 0,
       "last_points_date": "2025-04-20T17:00:39.081403+00:00"
     },
@@ -100,7 +100,7 @@
       "last_points_date": "2025-04-20T17:00:39.081403+00:00"
     },
     "Mohan18Kumar": {
-      "points": 24,
+      "points": 27,
       "social_media": "",
       "last_points_date": "2025-04-20T17:00:39.081403+00:00"
     },
@@ -119,7 +119,7 @@
       "social_media_points": 0
     },
     "Ranyaa999": {
-      "points": 15,
+      "points": 18,
       "social_media_points": 0,
       "last_points_date": "2025-04-20T17:00:39.081403+00:00"
     },
@@ -129,7 +129,7 @@
       "last_points_date": "2025-04-12T08:37:12.152930+00:00"
     },
     "Dhaksaya": {
-      "points": 18,
+      "points": 21,
       "social_media_points": 0,
       "last_points_date": "2025-04-19T12:50:38.710791+00:00"
     },
@@ -1359,6 +1359,41 @@
       "pr_number": 373,
       "date": "2025-04-24T18:46:04.125709+00:00",
       "reason": "Daily PR Challenge: PR #373"
+    },
+    {
+      "username": "22MH1A04H3",
+      "points": 3,
+      "pr_number": 387,
+      "date": "2025-04-25T18:44:27.653186+00:00",
+      "reason": "Daily PR Challenge: PR #387"
+    },
+    {
+      "username": "Dhaksaya",
+      "points": 3,
+      "pr_number": 386,
+      "date": "2025-04-25T18:44:33.725975+00:00",
+      "reason": "Daily PR Challenge: PR #386"
+    },
+    {
+      "username": "Mohan18Kumar",
+      "points": 3,
+      "pr_number": 385,
+      "date": "2025-04-25T18:44:39.954405+00:00",
+      "reason": "Daily PR Challenge: PR #385"
+    },
+    {
+      "username": "shagun111484",
+      "points": 3,
+      "pr_number": 384,
+      "date": "2025-04-25T18:44:45.872932+00:00",
+      "reason": "Daily PR Challenge: PR #384"
+    },
+    {
+      "username": "Ranyaa999",
+      "points": 3,
+      "pr_number": 382,
+      "date": "2025-04-25T18:44:54.552224+00:00",
+      "reason": "Daily PR Challenge: PR #382"
     }
   ],
   "metadata": {
@@ -1368,8 +1403,8 @@
     "event_start_date": "2025-04-01",
     "last_updated": "",
     "total_participants": 31,
-    "total_points_distributed": 759
+    "total_points_distributed": 774
   },
-  "total_points": 759,
-  "last_updated": "2025-04-24T19:22:03.481882+00:00"
+  "total_points": 774,
+  "last_updated": "2025-04-25T19:18:45.780045+00:00"
 }
