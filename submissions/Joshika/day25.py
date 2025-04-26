@@ -9,7 +9,6 @@ for i in a:
         t=s
         l=0
     elif(l==p):
-        p=p
         s=t
 print("Longest word:",s)
 
