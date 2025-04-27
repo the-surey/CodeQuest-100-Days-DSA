@@ -1,7 +1,7 @@
 {
   "users": {
     "22MH1A04H3": {
-      "points": 27,
+      "points": 30,
       "social_media": "",
       "social_media_points": 0,
       "last_points_date": "2025-04-20T17:00:39.081403+00:00"
@@ -32,7 +32,7 @@
       "last_points_date": "2025-04-08T17:49:26.851313+00:00"
     },
     "shagun111484": {
-      "points": 27,
+      "points": 30,
       "social_media_points": 0,
       "last_points_date": "2025-04-20T17:00:39.081403+00:00"
     },
@@ -95,12 +95,12 @@
       "social_media_points": 4
     },
     "Nataraj-chandrasekaran": {
-      "points": 15,
+      "points": 18,
       "social_media": "",
       "last_points_date": "2025-04-20T17:00:39.081403+00:00"
     },
     "Mohan18Kumar": {
-      "points": 30,
+      "points": 33,
       "social_media": "",
       "last_points_date": "2025-04-20T17:00:39.081403+00:00"
     },
@@ -110,7 +110,7 @@
       "last_points_date": "2025-04-18T16:20:48.258273+00:00"
     },
     "joshika0805": {
-      "points": 33,
+      "points": 36,
       "social_media_points": 0,
       "last_points_date": "2025-04-16T18:17:37.231516+00:00"
     },
@@ -129,7 +129,7 @@
       "last_points_date": "2025-04-12T08:37:12.152930+00:00"
     },
     "Dhaksaya": {
-      "points": 24,
+      "points": 27,
       "social_media_points": 0,
       "last_points_date": "2025-04-19T12:50:38.710791+00:00"
     },
@@ -1450,6 +1450,48 @@
       "pr_number": 383,
       "date": "2025-04-26T18:42:09.838967+00:00",
       "reason": "Daily PR Challenge: PR #383"
+    },
+    {
+      "username": "Dhaksaya",
+      "points": 3,
+      "pr_number": 400,
+      "date": "2025-04-27T18:41:44.556783+00:00",
+      "reason": "Daily PR Challenge: PR #400"
+    },
+    {
+      "username": "22MH1A04H3",
+      "points": 3,
+      "pr_number": 399,
+      "date": "2025-04-27T18:41:52.723282+00:00",
+      "reason": "Daily PR Challenge: PR #399"
+    },
+    {
+      "username": "shagun111484",
+      "points": 3,
+      "pr_number": 398,
+      "date": "2025-04-27T18:42:01.032029+00:00",
+      "reason": "Daily PR Challenge: PR #398"
+    },
+    {
+      "username": "Mohan18Kumar",
+      "points": 3,
+      "pr_number": 397,
+      "date": "2025-04-27T18:42:09.447819+00:00",
+      "reason": "Daily PR Challenge: PR #397"
+    },
+    {
+      "username": "joshika0805",
+      "points": 3,
+      "pr_number": 396,
+      "date": "2025-04-27T18:42:15.692523+00:00",
+      "reason": "Daily PR Challenge: PR #396"
+    },
+    {
+      "username": "Nataraj-chandrasekaran",
+      "points": 3,
+      "pr_number": 395,
+      "date": "2025-04-27T18:42:23.613607+00:00",
+      "reason": "Daily PR Challenge: PR #395"
     }
   ],
   "metadata": {
@@ -1459,8 +1501,8 @@
     "event_start_date": "2025-04-01",
     "last_updated": "",
     "total_participants": 31,
-    "total_points_distributed": 741
+    "total_points_distributed": 759
   },
-  "total_points": 741,
-  "last_updated": "2025-04-26T19:17:41.851334+00:00"
+  "total_points": 759,
+  "last_updated": "2025-04-27T19:15:52.221257+00:00"
 }
