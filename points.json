@@ -144,7 +144,7 @@
       "last_points_date": "2025-04-15T13:04:48.287773+00:00"
     },
     "Teju1405": {
-      "points": 3,
+      "points": 6,
       "social_media_points": 0
     }
   },
@@ -1527,6 +1527,34 @@
       "pr_number": 402,
       "date": "2025-04-28T18:46:02.566923+00:00",
       "reason": "Daily PR Challenge: PR #402"
+    },
+    {
+      "username": "Teju1405",
+      "points": 3,
+      "pr_number": 419,
+      "date": "2025-04-30T18:45:29.896594+00:00",
+      "reason": "Daily PR Challenge: PR #419"
+    },
+    {
+      "username": "joshika0805",
+      "points": 3,
+      "pr_number": 418,
+      "date": "2025-04-30T18:45:36.266516+00:00",
+      "reason": "Daily PR Challenge: PR #418"
+    },
+    {
+      "username": "Nataraj-chandrasekaran",
+      "points": 3,
+      "pr_number": 417,
+      "date": "2025-04-30T18:45:42.777178+00:00",
+      "reason": "Daily PR Challenge: PR #417"
+    },
+    {
+      "username": "22MH1A04H3",
+      "points": 3,
+      "pr_number": 416,
+      "date": "2025-04-30T18:45:49.056529+00:00",
+      "reason": "Daily PR Challenge: PR #416"
     }
   ],
   "metadata": {
@@ -1536,8 +1564,8 @@
     "event_start_date": "2025-04-01",
     "last_updated": "",
     "total_participants": 31,
-    "total_points_distributed": 774
+    "total_points_distributed": 801
   },
-  "total_points": 798,
-  "last_updated": "2025-04-29T19:19:20.292627+00:00"
+  "total_points": 801,
+  "last_updated": "2025-04-30T19:22:21.145874+00:00"
 }
