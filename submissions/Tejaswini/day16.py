@@ -1,8 +1,9 @@
 
-n=int(input("Enter a number:"));
-def factorial(n):
-    if n == 0:
+a=int(input("Enter a number:"))
+def fact(n):
+    if n==(0|1):
         return 1
     else:
-        return n * factorial(n-1)
-print("Factorial of",n,"is",factorial(n));
+        return n*fact(n-1)
+s=fact(a)
+print("Factorial of a is",s)

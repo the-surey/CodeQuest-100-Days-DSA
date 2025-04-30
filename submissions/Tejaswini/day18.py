@@ -1,4 +1,6 @@
 
+
+
 def find_depth(structure):
     if not isinstance(structure, list):
         return 0
